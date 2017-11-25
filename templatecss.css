@@ -1,0 +1,139 @@
+body{
+	background-image: url("backimage.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-color: black;
+}
+#wrapper , #main {
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	padding: 12px 12px;
+}
+#main {
+    margin-left: 40vw;
+    margin-top: 100px;
+    padding: 0px;
+    color: white;
+    height: 450px;
+    width: 700px;
+    text-align: center;
+    font-size: 35px;
+    display: block;
+}
+#logo{
+	    border: 1px solid white;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: 0px auto;
+}
+#innerdiv{
+	height: 200px;
+	padding: 0px 0px;
+	box-sizing: border-box;
+	opacity: 1;
+	animation-name: onstart;
+	animation-duration: 2s;
+
+}
+p{
+	font-size:20px;
+	letter-spacing: 4px;
+}
+ul{
+	list-style-type: none;
+	font-size: 15px;
+	margin: 0px auto;
+	padding: 0px;
+	border:1px solid white;
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+	top: -5px;
+	
+}
+li{
+	margin:0px;
+	padding: 10px 15px;
+	display: inline-block;
+	border-left: 0.5px solid white;
+	float: right;
+	transition: background-color 1s;
+
+	}
+a{
+	text-decoration:none;
+	color: white;
+}
+li:hover{
+	background-color: rgba(255, 255, 255, 0.175);
+
+
+}
+#logo{
+	transition: background-color 1s,font-size 1s;
+}
+#logo:hover{
+background-color: rgba(255, 255, 255, 0.175);
+font-size: 50px;
+}
+
+@media only screen and (max-width:620px){
+	body{
+		background-image: none;
+
+	}
+	#main{
+		margin: 0px auto;
+		padding: 0px;
+		width: 100%;
+	}
+	li{
+		float: none;
+		display: block;
+	}
+	#innerdiv:hover{
+		height: 150px;
+	}
+	h1{
+		font-size: 20px;
+	}
+	li{
+		border-bottom: 0.5px solid white;
+	}
+}
+@keyframes onstart {
+	0%{height: 0px; opacity:0;}
+	50%{height: 200px; }
+	100%{height: 200px; opacity:1;}
+
+}
+
+#loader{
+	        top: -4.3%;
+    left: 41.4%;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	    border: 10px solid #9e9e9e8a;
+    background-color: transparent;
+    border-top-color: #e9ebf2;
+	border-radius:100%;
+	z-index: 400000;
+	animation-name: loading;
+	animation-duration: 2s;
+	animation-iteration-count: 2;
+	z-index: -222222;
+	
+
+
+}
+@keyframes loading{
+	0%{box-shadow: 0px 0px 500px 100px white;}
+	33%{box-shadow: 0px 0px 500px 200px #ffe11a8c;}
+	66%{box-shadow: 0px 0px 500px 100px white;}
+	100%{transform:  rotate(720deg) ;
+		 box-shadow: 0px 0px 500px 100px black;}
+}
